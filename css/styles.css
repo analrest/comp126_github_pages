@@ -1,0 +1,358 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+@font-face {
+  font-family: "responsivenav";
+  src: url("../icons/responsivenav.eot");
+  src: url("../icons/responsivenav.eot?#iefix") format("embedded-opentype"),
+    url("../icons/responsivenav.ttf") format("truetype"),
+    url("../icons/responsivenav.woff") format("woff"),
+    url("../icons/responsivenav.svg#responsivenav") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nav-toggle {
+  text-decoration: none;
+  text-indent: -300px;
+  position: relative;
+  overflow: hidden;
+  width: 60px;
+  height: 55px;
+  float: right;
+}
+
+.nav-toggle:before {
+  color: white; /* edit this to change the icon color */
+  font: normal 28px/55px "responsivenav"; /* edit font-size (28px) to change the icon size */
+  text-transform: none;
+  text-align: center;
+  position: absolute;
+  content: "\2261"; /* hamburger icon */
+  text-indent: 0;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.nav-toggle.active:before {
+  font-size: 24px;
+  content: "\78"; /* X/close icon */
+}
+
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.nav-collapse li {
+  display: block;
+}
+.nav-collapse li a{
+  color:white;
+  text-decoration: none;
+}
+
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1;
+}
+
+.nav-collapse.opened {
+  max-height: 9999px;
+}
+
+header {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  justify-content: space-between;
+  background-color:rgb(62, 13, 167);
+  color: white;
+}
+header .nav-collapse li:hover,
+header .nav-collapse li:focus{
+  text-decoration: underline;
+}
+
+header h2{
+  display: inline-block;
+  padding: 0 20px 0 20px;
+  flex: left;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.second-header{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 20px 10px 40px 10px;
+  padding: 30px 0 20px 0;
+  text-align: center;
+  box-shadow: 0 5px 5px 0 rgb(240, 239, 239), 0 5px 5px 0 rgb(240, 239, 239);
+}
+.learn-more{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  display: inline-block;
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-size: 1.25rem;
+  background-color: rgb(62, 13, 167);
+}
+.learn-more:hover,
+.learn-more:focus{
+  transition: all 600ms ease;
+  background-color: rgb(255, 45, 160);
+}
+.learn-more a{
+  color: white;
+  text-decoration: none;
+}
+.sign-up{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 30px 20px 20px 20px;
+  margin: 40px 10px 20px 10px;
+  box-shadow: 0 5px 5px 0 rgb(240, 239, 239), 0 5px 5px 0 rgb(240, 239, 239);
+}
+.sign-up p{
+  margin: 20px 0;
+}
+.name{
+  line-height: 150%;
+  margin: 20px 0;
+}
+.email{
+  line-height: 150%;
+  margin: 20px 0;
+}
+.group{
+  margin: 20px 0;
+}
+
+
+input[type="text"],
+textarea,
+select{ 
+  padding: 10px;
+  width: 97%;
+}
+
+input[type="text"]:hover,
+input[type="text"]:focus,
+textarea:hover,
+textarea:focus,
+select:hover,
+select:focus{
+  padding: 10px;
+  width: 97%;
+  border: solid hotpink 2px;
+}
+
+input[type="email"],
+textarea,
+select{ 
+  padding: 10px;
+  width: 97%;
+}
+
+input[type="email"]:hover,
+input[type="email"]:focus,
+textarea:hover,
+textarea:focus,
+select:hover,
+select:focus{
+  padding: 10px;
+  width: 97%;
+  border: solid hotpink 2px;
+}
+
+button{ 
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+  background: linear-gradient(to right, hotpink, rgb(62, 13, 167));
+  background-size: 100%;
+  background-position: left;
+  transition: background-size 1.5s ease-out;
+  /* transition: background-color 10 ease; */
+}
+button:hover, button:focus{ 
+  /* transition: background-color 10s ease; */
+  /* transition: background-color 10s; */
+  /* background-image: linear-gradient(to left, rgb(62, 13, 167), rgb(62, 13, 167)); */
+  background-color: rgb(62, 13, 167);
+  background-position: right;
+  background-size: 600%;
+}
+
+.pictures{
+  padding: 30px 20px 20px 20px;
+  margin: 10px 10px 10px 10px;
+  box-shadow: 0 5px 5px 0 rgb(240, 239, 239), 0 5px 5px 0 rgb(240, 239, 239);
+}
+img{
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 5px;
+  height: 200px;
+  object-fit: cover;
+}
+
+@keyframes image-resize{
+  0%{transform: scale(1);}
+  100%{transform: scale(1.1);}
+}
+
+img:hover,
+img:focus{ 
+  animation: image-resize 200ms;
+  transform: scale(1.1);
+}
+
+
+footer{
+  background-color: rgb(62, 13, 167);
+  color: white;
+  padding: 8px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+@media screen and (min-width: 700px) {
+}
+
+header {
+  z-index: 3;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.logo {
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 55px;
+  padding: 0 20px;
+  color: black;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.nav-collapse,
+.nav-collapse * {
+  box-sizing: border-box;
+}
+
+.nav-collapse,
+.nav-collapse ul {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+
+.nav-collapse a {
+  text-decoration: none;
+  padding: 0.7em 1em;
+  color: black;
+  width: 100%;
+  display: block;
+}
+
+.nav-collapse ul ul a {
+  padding-left: 2em;
+}
+
+@media screen and (min-width: 768px) {
+  .nav-collapse ul {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  
+  .nav-collapse li {
+    width: auto;
+  }
+
+  .nav-collapse a {
+    padding: 1.02em 2em;
+    text-align: center;
+    border-top: 0;
+    margin: 0;
+  }
+
+  .nav-collapse ul ul a {
+    display: none;
+  }
+
+  .nav-collapse.closed {
+    max-height: none;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  header {
+    z-index: 3;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+  }
+
+  header h2{
+    display: inline-block;
+    padding: 0 20px 0 20px;
+    flex: left;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  header .nav-collapse{
+    width: 40%;
+    display: flex;
+    flex: end;
+  }
+
+  .both-cards{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+  }
+  .second-header{
+    margin: 0;
+    grid-column: 1/2;
+  }
+  .sign-up{
+    margin: 0;
+    grid-column: 2/3;
+  }
+
+  .pictures{
+    display: flex;
+    justify-content: center;  
+    gap: 30px;
+  } 
+  
+
+}
